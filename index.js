@@ -1,6 +1,11 @@
 const express = require('express')
 const morgan = require("morgan")
+//const path = require('path');
 const app = express()
+
+app.use(express.static('build'))
+
+
 console.log("hi")
 app.use(express.json())
 app.use(morgan(function (tokens, req, res) {
